@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PrograVIModelStoreContainer" CdmEntityContainer="PrograVIEntities">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="PrograVIModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getuserBylogin" FunctionName="PrograVIModel.Store.getuserBylogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PrograVIModel.getuserBylogin_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
